@@ -18,93 +18,42 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="commission.html">Commission</a></li>
-                <li><a href="login.html">login</a></li>
+                <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--these artworks are just placeholder, going to  add JS  -->
+        <!-- Featured Artworks Section with Slideshow -->
         <section id="art-gallery">
             <h2>Featured Artworks</h2>
-            
-            <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_5terre.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900664.jpg" alt="trees" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img src="https://wallpapercave.com/wp/wp1900664.jpg" alt="Artwork 1" style="width:100%">
+                    <div class="desc">Trees - By Jane Doe</div>
                 </div>
+                <div class="slides">
+                    <img src="https://th.bing.com/th/id/R.d3950d540d30a55390d7fcab6bd3c349" alt="Artwork 2" style="width:100%">
+                    <div class="desc">Lights - By John Smith</div>
+                </div>
+                <div class="slides">
+                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="Artwork 3" style="width:100%">
+                    <div class="desc">Homes - By Emily Brown</div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_forest.jpg">
-                    <img src="https://th.bing.com/th/id/R.d3950d540d30a55390d7fcab6bd3c349?rik=DlL%2fhjAtY3pVSw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-sX_ZfykC8J4%2fUd5i8WtAvBI%2fAAAAAAAAXBI%2fbkRh50HjqoM%2fs1600%2fColorful%2bPaintings%2bWallpapers%2b%2525282%252529.jpg&ehk=bKW%2fDyhrFG1vSGj3qwXAmTRCH46bUKPr0CgWZswdpSY%3d&risl=&pid=ImgRaw&r=0" alt="Lights" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-              
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
-
-              <div class="responsive">
-                <div class="gallery">
-                  <a target="_blank" href="img_mountains.jpg">
-                    <img src="https://wallpapercave.com/wp/wp1900650.jpg" alt="homes" width="600" height="400">
-                  </a>
-                  <div class="desc">Add a description of the image here</div>
-                </div>
-              </div>
         </section>
 
         
         <section id="art-table">
             <h2 id="BBL">Art Details</h2>
+            <label for="filter">Filter by Availability:</label>
+            <select id="filter" onchange="filterTable()">
+                <option value="all">All</option>
+                <option value="Available">Available</option>
+                <option value="Sold">Sold</option>
+            </select>
             <table>
                 <thead>
                     <tr>
@@ -200,6 +149,6 @@
         </ul>
         <p>&copy;  2024 THEARTS</p>
     </footer>
-
+    <script src="gallery.js"></script>
 </body>
 </html>
