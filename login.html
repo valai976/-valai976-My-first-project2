@@ -7,6 +7,128 @@
     <link rel="stylesheet" href="project.css">
     <title>Login</title>
     <script defer src="login-validation.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login {
+            background-image: url("https://wallpapercave.com/wp/wp2771916.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Login Form */
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .pic {
+            margin-bottom: 20px;
+        }
+
+        .pic img {
+            width: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-size: 1rem;
+            color: #333;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 
 <body class="login">
@@ -18,23 +140,21 @@
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="commission.html">Commission</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="pic">
-        <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Avatar" class="avatar">
-    </div>
-
     <div class="container">
+        <div class="pic">
+            <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" alt="Avatar" class="avatar">
+        </div>
         <form id="loginForm" action="https://webdevbasics.net/scripts/demo.php" method="post">
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="Enter Email" required><br>
-
+            <input type="text" id="email" name="email" placeholder="Enter Email" required aria-label="Email Address">
+            
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Enter Password" required><br>
-
+            <input type="password" id="password" name="password" placeholder="Enter Password" required aria-label="Password">
+            
             <button type="submit">Login</button>
         </form>
     </div>
